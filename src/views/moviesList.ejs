@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Películas</title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+
+<body>
+    <main>
+    <figure>
+        <img src="/img/logo-DH.png" alt="Logo Digital House">
+    </figure>
+    <h1 class="moviesListTitulo">LISTADO DE PELÍCULAS</h1>
+    <br>
+    <p>
+        <a class="botonAgregar" href="/movies/add">Agregar una Pelicula</a>
+        <a class="botonVolver" href="/">inicio</a>
+    </p>
+    <br>
+    <ul>
+        <% for( let i = 0; i < movies.length; i++ ) { %>
+        <li>
+            <a style="color:rgb(2, 1, 1);" href="/movies/detail/<%= movies[i].id %>"><%= movies[i].title %></a>
+        </li>
+        <% } %>
+    </ul>
+    </main>
+    <script src="/js/moviesList.js">
+
+    </script>
+</body>
+</html>
